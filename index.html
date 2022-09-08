@@ -13,16 +13,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Just+Another+Hand&family=Kalam&display=swap"
-    rel="stylesheet" />
+  <link rel="icon" href="../tiendasura-1/assets/img/tb.gif">
+  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Just+Another+Hand&family=Kalam&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/styles/estilos.css" />
+   
 </head>
 
 <body class="fuente">
   <header>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark animate__animated animate__zoomInLeft">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg bg-info bg-gradient  animate__animated ">
+      <div class="container-fluid ">
+        <a class="navbar-brand" href="#">DETODITO PAISA MEDALLO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -30,51 +31,96 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="./src/views/tienda.html">Storage</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link active" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link active"  href="#registro">Sign up</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link active" aria-current="page" href="#redes" >Follow Us</a>
             </li>
+          </ul>
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Car</a>
+            </li>
+            <li class="nav-item" >
+              <a id="usuario" class="nav-link active" aria-current="page" data-bs-toggle="collapse" href="#collapseExample">Usuario</a>              
+            </li>
+            <li class="nav-item" >
+              <a id="botonSalir" class="nav-link active" aria-current="page" href="">Exit
+                <i class="bi bi-box-arrow-in-left"></i>
+              </a>
+            </li>            
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>    
+    <div class="collapse" id="collapseExample">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8 my-5">
+            <form action="" id="iniciar" >
+              <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" id="correo"> 
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
+              </div>     
+              <button type="submit" class="btn btn-primary">Submit</button>             
+            </form>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
   </header>
   <main>
-    <section class="banner text-white">
-      <h1>TIENDA FUNKOS B.R_MEDELLIN</h1>
+    <section  class="banner text-dark">
+      <h1 class="text-end " >DETODITO PAISA MEDALLO</h1>
+      <h2 class="text-end " >PASSION FOR OUR PRODUCTS</h2>
+      
     </section>
 
-    <section>
+    <section class="text-dark  ">
       <div class="container mt-1">
         <div class="row">
           <div class="col-12 col-md-8">
-            <img src="./assets/img/img2.png" alt="" class="img-fluid w-100" />
+            <img src="./assets/img/registrate.png" alt="" class="img-fluid w-100" />
           </div>
           <div class="col-12 col-md-4 align-self-center">
             <h3>Welcome</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-              eveniet libero sed placeat, aliquam nobis distinctio
-              dignissimos, necessitatibus, exercitationem possimus autem
-              aperiam cumque blanditiis? Exercitationem unde repellendus
-              dolores voluptatibus nobis!
+              Register In DETODITO PAISA MEDALLO Entering Your Data And So You Can Access Our Platform
+              Sign in now!
             </p>
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
               aria-controls="offcanvasRight"> <i class="bi bi-controller m-2"></i> Sign up</button>
 
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
               aria-labelledby="offcanvasRightLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasRightLabel"> Sign up</h5>
+              <div class="offcanvas-header"><h5 class="offcanvas-title" id="offcanvasRightLabel"> Sign up</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
+              <div class="offcanvas-body">
+                <form action="" id="formulario" >
+                  <div class="mb-3">
+                    <label class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="correo"> 
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password">
+                  </div>                  
+                </form>
+              </div>  
+              
               <div class="offcanvas-body">
                 <form class="row g-3">
                   <div class="col-md-4">
@@ -119,7 +165,7 @@
                     </div>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-primary" type="submit">Submit form</button>
+                    <button id="botonRegistro" class="btn btn-primary" type="submit">Registrate</button>
                   </div>
                 </form>
               </div>
@@ -129,15 +175,43 @@
         </div>
       </div>
     </section>
+
+
+    
+    
   </main>
   <footer>
-    
+    <header>
+      <h2 class="text-center" >Nuestras Redes</h2>
+      <nav>
+          <h3>Siguenos </h3>
+          <section class="p-5">
+            <nav class="nav nav-pills flex-column flex-sm-row gap-2" id="redes">
+              <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="https://es-la.facebook.com/"> <i class="bi bi-facebook"></i> Facebook</a>
+              <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="https://www.instagram.com/"> <i class="bi bi-instagram"></i> Instagram</a>
+              <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="https://twitter.com/?lang=es"> <i class="bi bi-twitter"></i> twitter</a>
+              <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="https://www.youtube.com/"> <i class="bi bi-youtube"></i> youtube</a>
+            
+            </nav>
+          </section >
+          
+          
+      </nav>
+  </header> 
   </footer>
+
+
+  <script src="./src/services/conexionFireBase.js" type="module" ></script>
+  <script src="./src/services/registro.js" type="module" ></script>
+  <script src="./src/services/observadorEstado.js" type="module" ></script>
+  <script src="./src/services/logout.js" type="module" ></script>
+  <script src="./src/services/login.js" type="module"></script>
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

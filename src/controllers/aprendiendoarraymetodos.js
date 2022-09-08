@@ -81,6 +81,20 @@ let productos=[
         popularity :5,
         description:"Tactile Mechanical Titan Switch: Entirely designed and built by ROCCAT engineers and developed for gamers who love the feel of mechanical switches, but demand the feel of a crisp, tactile hit and instant responsiveness, Tenkeyless Form Factor: This smaller form factor allows for a larger pad and greater range of mouse movement, improving your aiming accuracy, Advanced Anti-Ghosting: Technology optimized for gamers to ensure every keystroke from your most frequently used keys is registered, no matter how frantic the action gets"
     },
+    {
+        nombre:"VESPA 125",
+        fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasuraabc.appspot.com/o/img8.webp?alt=media&token=241cc276-c715-47c5-8483-8487ae7a9150","https://firebasestorage.googleapis.com/v0/b/tiendasuraabc.appspot.com/o/img81.webp?alt=media&token=51543374-634a-4cef-b2f9-b7b9ced1fb2b"],
+        precio:149.25,
+        popularity :4,
+        description:"Just like the original Vespa, this buildable model is equipped with a steering system, movable kickstand, 2 seats and a buildable engine under a removable cover, plus a side-mounted front wheel. As finishing touches, it includes the Vespa logo, a classic Italian license plate from the 60s, a spare wheel, a helmet and a basket with a bouquet of flowers on the back."
+    },
+    {
+        nombre:"FERRARI DAYTONA SP3",
+        fotos:["https://firebasestorage.googleapis.com/v0/b/tiendasuraabc.appspot.com/o/img1.webp?alt=media&token=258db8fb-ef03-4be5-8053-49f2cac1a4d1","https://firebasestorage.googleapis.com/v0/b/tiendasuraabc.appspot.com/o/img123.webp?alt=media&token=0cdc9746-abb3-4af1-ab8b-9da4f89afb36"],
+        precio:666.10,
+        popularity :5,
+        description:"From the LEGO® Technic™ Ultimate Car Concept series comes an impressive build for adult Ferrari fans. Step into a spotlight zone as you recreate the features of the Ferrari Daytona SP3 model in classic red with chrome rims. Then put it on display to admire the iconic rear end and curved lines that make this 1:8 scale model so special."       
+    },
 
 
 ]
@@ -122,20 +136,37 @@ let fila=document.getElementById("fila")
     let precio=document.createElement("h2")
     precio.textContent="US $" + producto.precio
 
+
+    
+    //Creando Popularidad
+    let popularida=document.createElement("h1")
+    popularida.classList.add("d-none")
+    popularida.textContent= producto.popularity
+    
+    
+    //Creando estrellas
+    let contenedorEstrellas = document.createElement("div")
+    for (let i=1; i<=producto.popularity;i++){
+        let estrellas = document.createElement("i");
+    estrellas.classList.add("bi", "bi-star-fill", "text-warning");
+    contenedorEstrellas.appendChild(estrellas);
+    }
+
     //Creando La Descripcion
     let description=document.createElement("p")
     description.classList.add("text-danger","d-none")
     description.textContent="Descripcion: " + producto.description
 
-    //Creando Popularidad
-    let popularida=document.createElement("h1")
-    popularida.textContent="popularity : " + producto.popularity
+
+
+
 
     //Definiendo Padres E Hijos
     tarjeta.appendChild(imagen)
     tarjeta.appendChild(nombre)
-    tarjeta.appendChild(precio)
     tarjeta.appendChild(popularida)
+    tarjeta.appendChild(contenedorEstrellas)
+    tarjeta.appendChild(precio)
     tarjeta.appendChild(description)
     columna.appendChild(tarjeta)
     fila.appendChild(columna)

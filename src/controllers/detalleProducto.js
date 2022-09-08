@@ -25,10 +25,35 @@ let precio = document.getElementById("precioInfo")
 precio.textContent = producto.precio
 let description = document.getElementById("descripcionInfo")
 description.textContent = producto.description
+
+
+//referencia a las estrellas
 let popularity = document.getElementById("popularity")
-popularity.textContent = producto.popularity
+popularity.classList.add("d-none")
+popularity.textContent=producto.popularity
+
+
+//creando las estrellas Las Estrellas
+let contenedorEstrellas=document.getElementById("contendorEstrellas")
+let popularidaInfo= document.getElementById("popularity")
+
+for (let i=1; i<=producto.popularity;i++){
+    let estrella=document.createElement("i")
+    estrella.classList.add("bi", "bi-star-fill", "text-warning")
+    contenedorEstrellas.appendChild(estrella)
+
+} 
+    
+
+
+
 let pildora = document.getElementById("pildora")
 console.log(pildora.textContent)
+
+
+
+
+
 
 //escucho el click a añadir al carrito
 let botonAgregarCarrito = document.getElementById("botonAgregarCarrito")

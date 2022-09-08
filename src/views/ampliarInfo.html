@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Storage</title>
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
@@ -13,17 +13,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Just+Another+Hand&family=Kalam&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="../../assets/styles/estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Just+Another+Hand&family=Kalam&display=swap"rel="stylesheet" />
+  <link rel="icon" href="../tiendasura-1/assets/img/tb.gif">
+  <link rel="stylesheet" href="../../assets/styles/ampliarInfo.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="icon" href="../../assets/img/tb.gif">
 </head>
 
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-dark nav-dark">
+    <nav class="navbar navbar-expand-lg bg-info bg-gradiente">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">DETODITO PAISA MEDALLO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -31,21 +33,22 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/tiendasura-1/src/views/tienda.html">Storage</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link active" href="http://127.0.0.1:5500/tiendasura-1/src/views/resumenCompra.html">shopping cart</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link disabled">Follow us</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link"> <i class="bi bi-cart-check fs-2"></i>
+              <a class="nav-link" href="./resumenCompra.html"> 
+                <i class="bi bi-cart-check fs-2"></i>
                 <span id="pildora"
                   class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger ">
                   0
@@ -68,15 +71,22 @@
         </div>
         <div class="col-12 col-md-5 align-self-center">
           <h3 id="nombreInfo">Nombre Producto</h3>
-          <h4 id="popularity">populary</h4>
+          <div id="popularidaInfo"></div>
+          <h4 id="popularity"></h4>
+
           <p id="descripcionInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ad atque explicabo
             quos magnam laboriosam reprehenderit adipisci! Laborum dicta, necessitatibus exercitationem consequatur
             molestiae, dolorem, laboriosam iste ratione voluptas rerum molestias</p>
-          <img src="../../assets/img/visa.png" alt="">
-          <i class="bi bi-pip-fill"></i>
-          <i class="bi bi-pip-fill"></i>
-          <i class="bi bi-pip-fill"></i>
+              <i class="bi bi-credit-card-2-front-fill"></i>
+              <i class="bi bi-credit-card-2-front-fill"></i>
+              <i class="bi bi-credit-card-2-front-fill"></i>
+              <i class="bi bi-credit-card-2-front-fill"></i>
+              <i class="bi bi-credit-card-2-front-fill"></i>
+          
           <h2 id="precioInfo">$500000</h2>
+           <div id="contendorEstrellas"></div>
+
+          
 
           <hr>
           <h3><i class="bi bi-truck fs-2"></i> Shipping all over the country </h3>
@@ -94,7 +104,7 @@
   </main>
 
   <footer>
-
+    
   </footer>
 
   <!-- JavaScript Bundle with Popper -->

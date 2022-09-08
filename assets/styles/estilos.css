@@ -1,21 +1,23 @@
 .banner{
-    background-image: url("../img/img1.jpg");
-    padding: 15% 30% 25% 8%;
-    background-size: cover;
+    background-image: url("../img/imgFondoTienda.jpg");
+    padding: 15% 15% 15% 15%;
+    background-size: 100% 100%;
     background-position: top center;
     position: relative;
     z-index:1;
+    
 }
 
+/*padding: 15% 30% 85% 8%;*/
 .banner::after{
     content: '';
     height: 100%;
     width:100%;
-    background-color: black;
+    background-color: rgb(141, 15, 15);
     position:absolute;
     top:0;
     left:0;
-    opacity: 0.45;
+    opacity: 0.001;
     z-index: -1;
 }
 
@@ -24,6 +26,15 @@
     font-family: 'Just Another Hand', cursive;
     font-family: 'Kalam', cursive;
     
+} 
+
+body{
+    
+    background-size: 100% 100%;
 }
 
-
+.textPrincipal{
+    
+    position: 90px;
+    justify-content: center;
+}
