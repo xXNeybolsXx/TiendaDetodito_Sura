@@ -1,40 +1,173 @@
-.banner{
-    background-image: url("../img/imgFondoTienda.jpg");
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Poppins&display=swap');
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#fuente {
+    background-image: url(../img/Arcoíris\ Gradiente\ Rosa\ y\ Naranja\ Fondo\ Virtual\ para\ Zoom.png);
+}
+
+.banner {
+
+    background:  url(../img/rainbow-vortex.svg);
     padding: 15% 15% 15% 15%;
     background-size: 100% 100%;
     background-position: top center;
     position: relative;
-    z-index:1;
-    
+    z-index: -1;
+
+
 }
 
+
+
+#texto1{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap; 
+    border-right: 3px solid;
+    width: 23ch;
+    animation: typing 2s steps(23),blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+}
+@keyframes typing {
+    from{width: 0}
+}
+@keyframes blink {
+    50%{border-color: transparent;}
+}
 /*padding: 15% 30% 85% 8%;*/
-.banner::after{
+.banner::after {
     content: '';
     height: 100%;
-    width:100%;
-    background-color: rgb(141, 15, 15);
-    position:absolute;
-    top:0;
-    left:0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     opacity: 0.001;
     z-index: -1;
 }
 
-.fuente{
+.fuente {
     font-family: 'Delius', cursive;
     font-family: 'Just Another Hand', cursive;
     font-family: 'Kalam', cursive;
-    
-} 
 
-body{
-    
-    background-size: 100% 100%;
 }
 
-.textPrincipal{
-    
+body {
+
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+}
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    background: salmon;
+    border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: aqua;
+}
+
+.textPrincipal {
+
     position: 90px;
     justify-content: center;
 }
+
+
+#hov a:hover {
+    color: aqua;
+    text-shadow:
+        0 0 5px rgba(0, 178, 255, 1),
+        0 0 10px rgba(0, 178, 255, 1),
+        0 0 20px rgba(0, 178, 255, 1),
+        0 0 40px rgba(38, 104, 127, 1),
+        0 0 80px rgba(38, 104, 127, 1),
+        0 0 90px rgba(38, 104, 127, 1),
+        0 0 100px rgba(38, 104, 127, 1),
+        0 0 140px rgba(38, 104, 127, 1),
+        0 0 180px rgba(38, 104, 127, 1);
+}
+
+#fot a:hover {
+    color: aqua;
+    text-shadow:
+        0 0 5px rgba(0, 178, 255, 1),
+        0 0 10px rgba(0, 178, 255, 1),
+        0 0 20px rgba(0, 178, 255, 1),
+        0 0 40px rgba(38, 104, 127, 1),
+        0 0 80px rgba(38, 104, 127, 1),
+        0 0 90px rgba(38, 104, 127, 1),
+        0 0 100px rgba(38, 104, 127, 1),
+        0 0 140px rgba(38, 104, 127, 1),
+        0 0 180px rgba(38, 104, 127, 1);
+}
+
+#btn-sing:hover{
+    border: 1px solid;
+    transition-duration: 1s;
+    background-color: rgb(252, 154, 144);
+}
+
+#botonAgregarCarrito{
+    box-shadow: salmon 1px 1px 20px 1px
+}
+#botonAgregarCarrito:hover{
+    border: 1px solid;
+    transition-duration: 1s;
+    background-color: rgb(252, 154, 144);
+}
+
+.fijo{
+    width: 0%;
+     position: relative;
+     background: white;
+     z-index: 1;
+     animation-name: mmm;
+     animation-duration: 3s;
+    
+}
+
+
+#ddd{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 26%;
+    height: 100px;
+    box-shadow: salmon 1px 1px 20px 1px;
+    background-color: white;
+    border-radius: 10px;
+    animation-name: bot;
+    animation-duration: 3s; 
+}
+
+
+
+    
+
+    
+
+
+@keyframes bot {
+    from{
+        width: 0%;
+        bottom: 0;
+
+    }
+    to{
+        width: 26%;
+        
+
+    } 
+    
+} 

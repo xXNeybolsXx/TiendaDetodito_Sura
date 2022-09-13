@@ -14,6 +14,7 @@ if (JSON.parse(localStorage.getItem("carrito")) != null) {
     pildora.textContent=carrito.length
 } else {
     carrito = [];
+    
 }
 
 //Referenciar La Imagen Del Producto
@@ -22,14 +23,16 @@ imagen.src = producto.imagen
 let nombre = document.getElementById("nombreInfo")
 nombre.textContent = producto.nombre
 let precio = document.getElementById("precioInfo")
+precio.classList.add("mt-3", "mb-3")
 precio.textContent = producto.precio
 let description = document.getElementById("descripcionInfo")
+description.classList.add("mt-3", "mb-3", "text-center","fs-7")
 description.textContent = producto.description
 
 
 //referencia a las estrellas
 let popularity = document.getElementById("popularity")
-popularity.classList.add("d-none")
+popularity.classList.add("d-none", "mt-3", "mb-3" )
 popularity.textContent=producto.popularity
 
 
@@ -52,12 +55,20 @@ console.log(pildora.textContent)
 
 
 
-
-
-
 //escucho el click a añadir al carrito
 let botonAgregarCarrito = document.getElementById("botonAgregarCarrito")
 botonAgregarCarrito.addEventListener("click", function (evento) {
+
+    Swal.fire({ 
+        position: 'buttom-end',
+        width:'500px',
+        height:'50px',
+        icon: 'success',
+        title: 'Compra añadida en Éxito!',
+        showConfirmButton: false,
+        timer: 700
+      })
+      
 
     let cantidad = document.getElementById("cantidadProducto")
     cantidad = cantidad.value

@@ -129,18 +129,19 @@ let fila=document.getElementById("fila")
     })
     //Crear Nombre
     let nombre=document.createElement("h3")
-    nombre.classList.add("fw-bold")
+    nombre.classList.add("fw-bold", "mt-3", "mb-3")
     nombre.textContent=producto.nombre
 
     //Creando El Precio
     let precio=document.createElement("h2")
+    precio.classList.add("mt-3", "mb-3")
     precio.textContent="US $" + producto.precio
 
 
     
     //Creando Popularidad
     let popularida=document.createElement("h1")
-    popularida.classList.add("d-none")
+    popularida.classList.add("d-none", "mt-2", "mb-2")
     popularida.textContent= producto.popularity
     
     

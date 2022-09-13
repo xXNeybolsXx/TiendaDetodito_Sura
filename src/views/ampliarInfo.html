@@ -11,77 +11,90 @@
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Delius&family=Just+Another+Hand&family=Kalam&display=swap"rel="stylesheet" />
+
+  
   <link rel="icon" href="../tiendasura-1/assets/img/tb.gif">
   <link rel="stylesheet" href="../../assets/styles/ampliarInfo.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="icon" href="../../assets/img/tb.gif">
+  <link rel="stylesheet" href="../../assets/styles/estilos.css">
 </head>
 
 <body>
 
-  <header>
-    <nav class="navbar navbar-expand-lg bg-info bg-gradiente">
+  <header style=" background-color: white; box-shadow: salmon 1px 1px 20px 1px ; margin-bottom: 12px;">
+    <nav id="hov" class="navbar navbar-expand-lg bg- bg-gradient animate__animated">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">DETODITO PAISA MEDALLO</a>
+        <a class="navbar-brand ms-5" href="../../index.html">DETODITO PAISA MEDALLO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/tiendasura-1/src/views/tienda.html">Storage</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="http://127.0.0.1:5500/tiendasura-1/src/views/resumenCompra.html">shopping cart</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Follow us</a>
+              <a class="nav-link active" aria-current="page" href="./tienda.html">Storage</a>
             </li>
           </ul>
           <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="./resumenCompra.html"> 
+                  <i class="bi bi-cart3 fs-4"></i>
+                  <span id="pildora"
+                    class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger ">
+                    0
+                  </span>
+                </a>
+              </li>
             <li class="nav-item">
-              <a class="nav-link" href="./resumenCompra.html"> 
-                <i class="bi bi-cart-check fs-2"></i>
-                <span id="pildora"
-                  class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger ">
-                  0
-                </span>
+              <a id="usuario" class="nav-link active" aria-current="page" data-bs-toggle="collapse"
+                href="#collapseExample"><i class="bi bi-person-circle fs-4 ms-3"></i></a>
+            </li>
+            <li class="nav-item">
+              <a id="botonSalir" class="nav-link active" aria-current="page" href="">Exit
+                <i class="bi bi-box-arrow-in-left"></i>
               </a>
             </li>
-
           </ul>
         </div>
       </div>
     </nav>
-
+    <div class="collapse" id="collapseExample">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-8 my-5">
+            <form action="" id="iniciar">
+              <div class="mb-3">
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" id="correo" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main>
-    <div class="container">
+    <div class="container mt-5">
       <div class="row">
         <div class="col-12 col-md-7">
           <img id="imagenInfo" src="" alt="" class="img-fluid w-100">
         </div>
         <div class="col-12 col-md-5 align-self-center">
-          <h3 id="nombreInfo">Nombre Producto</h3>
-          <div id="popularidaInfo"></div>
+          <h3 id="nombreInfo" class="text-center mb-3" style="font-weight: bold ;">Nombre Producto</h3>
+          <div id="popularidaInfo" class="m-3"></div>
           <h4 id="popularity"></h4>
 
-          <p id="descripcionInfo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ad atque explicabo
+          <p id="descripcionInfo" style="font-style: italic;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ad atque explicabo
             quos magnam laboriosam reprehenderit adipisci! Laborum dicta, necessitatibus exercitationem consequatur
             molestiae, dolorem, laboriosam iste ratione voluptas rerum molestias</p>
-              <i class="bi bi-credit-card-2-front-fill"></i>
-              <i class="bi bi-credit-card-2-front-fill"></i>
-              <i class="bi bi-credit-card-2-front-fill"></i>
-              <i class="bi bi-credit-card-2-front-fill"></i>
-              <i class="bi bi-credit-card-2-front-fill"></i>
+            <i class="bi bi-credit-card-2-back-fill fs-3 ms-4"></i>
           
           <h2 id="precioInfo">$500000</h2>
            <div id="contendorEstrellas"></div>
@@ -95,16 +108,38 @@
           <br>
           <label for=""> Quantity : </label>
           <input id="cantidadProducto" type="number" class="form-control" value="1" min="1">
-          <button id="botonAgregarCarrito" type="button" class="btn btn-info mt-3"> <i class="bi bi-cart3"></i> Add To
-            Cart </button>
+          <div class="d-flex justify-content-center align-items-center">
+            <button id="botonAgregarCarrito" type="button" class="btn mt-3"> <i class="bi bi-cart3"></i> Add To
+              Cart </button>
+          </div>
 
         </div>
       </div>
     </div>
   </main>
+ 
 
-  <footer>
-    
+  
+
+  <footer id="fot"  class="mt-5" style="display: flex; justify-content: center; align-items: center;">
+    <header>
+      <h2 class="text-center" style="font-weight: bold;">Contactanos!</h2>
+      <nav>
+        <p class="text-center">Echa una vistazo a nuestras redes.</p>
+        <section class="p-5">
+          <nav class="nav nav-pills flex-column flex-sm-row gap-2" id="redes">
+            <a class="bg-transparent text-black fs-3 nav-link active" aria-current="page" href="https://es-la.facebook.com/">
+              <i class="bi bi-facebook"></i></a>
+            <a class="bg-transparent text-black fs-3 text-sm-center nav-link active" aria-current="page" href="https://www.instagram.com/">
+              <i class="bi bi-instagram"></i></a>
+            <a class="bg-transparent text-black fs-3 text-sm-center nav-link active" aria-current="page" href="https://twitter.com/?lang=es">
+              <i class="bi bi-twitter"></i></a>
+            <a class="bg-transparent text-black fs-3 text-sm-center nav-link active" aria-current="page" href="https://www.youtube.com/">
+              <i class="bi bi-youtube"></i></a>
+          </nav>
+        </section>
+      </nav>
+    </header>
   </footer>
 
   <!-- JavaScript Bundle with Popper -->
@@ -112,6 +147,7 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
   <script src="../controllers/detalleProducto.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

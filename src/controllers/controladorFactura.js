@@ -10,8 +10,12 @@ let factura=document.getElementById("factura")
 
 if(carrito==null){
   
+    let titu = document.getElementById('titulo')
+    titu.textContent = "Realiza una Compra!"
     //Poner El Total En = 0
     totalCompra.textContent="Total: $0"
+    let conversor = document.getElementById("convertir")
+    conversor.classList.add("d-none")
     
 
     let fila=document.createElement("div")
@@ -22,7 +26,7 @@ if(carrito==null){
 
     let imagen=document.createElement("img")
     imagen.classList.add("img-fluid", "w-100")
-    imagen.src="../../assets/img/carrito_vacio.png"
+    imagen.src="../../assets/img/carr.jpg"
 
     let mensaje=document.createElement("h3")
     mensaje.classList.add("text-center")
@@ -91,10 +95,9 @@ if(carrito==null){
         //console.log(subtotalCalculado)
         subtotal.textContent="$ "+subtotalCalculado
 
-        total = subtotalCalculado + total
-        totalCompra.textContent= "USD$ " +total
-        
-
+        total = total+ subtotalCalculado
+    
+    
 
         //Creando Boton Limpiar Carrito
 
@@ -131,34 +134,37 @@ if(carrito==null){
 
 }
 
-//Poner El Total En Cero
-totalCompra.textContent = "COP " + total
+totalCompra.textContent = "US " + total
+totalCompra.classList.add("bg-dark", "text-white", "ps-3")
+
 
 let conversor = document.getElementById("convertir")
-conversor.classList.add("btn","btn-dark")
-conversor.textContent="convert to USD"
+conversor.classList.add("btn", "btn-dark")
+conversor.textContent = "convert to COP"
 
-conversor.addEventListener("click",function () {
-    let USD = 4300
+conversor.addEventListener("click", function(){
+    let USD = 4361
     let operacion = 0
-    operacion = "USD " + total * (USD/1)
-    totalCompra.textContent="Convert to COP"
+    operacion = "COP " + total * (USD/1).toFixed(2);
+    totalCompra.textContent = operacion
+    conversor.textContent = "convert to USD"
 
     if (bandera == true) {
-        conversor.addEventListener("click",function (){
-            totalCompra.textContent = "COP " + total
-            conversor.textContent = "Convert To USD"
+        conversor.addEventListener("click", function(){
+          totalCompra.textContent = "US$ " + total
+          conversor.textContent= "Convert to COP"
+          
+          
         })
-        bandera= !bandera
-    }
-    else{
-        conversor.addEventListener("click",function (){
-            totalCompra.textContent = "USD " + total
-            conversor.textContent = "Convert To COP"
-        })
-        bandera= !bandera
-
-    }
-    
-})
+        bandera = !bandera
+       } else {
+        conversor.addEventListener("click", function(){
    
+          totalCompra.textContent = operacion
+          conversor.textContent= "Convert to USD"
+          
+        })
+        bandera = !bandera
+        
+       }
+})
