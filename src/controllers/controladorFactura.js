@@ -11,7 +11,7 @@ let factura=document.getElementById("factura")
 if(carrito==null){
   
     let titu = document.getElementById('titulo')
-    titu.textContent = "Realiza una Compra!"
+    titu.textContent = "Make a Purchase!"
     //Poner El Total En = 0
     totalCompra.textContent="Total: $0"
     let conversor = document.getElementById("convertir")

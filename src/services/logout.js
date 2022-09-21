@@ -18,7 +18,14 @@ botonSalir.addEventListener("click",function(evento){
     window.location.href="./index.html"
     
     }).catch((error) => {
-    // An error happened.
+        // An error happened.
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops',
+            text: " Somethig went wrong! ",
+            footer: '<a href="">Why do I have this isse?</a>',
+        })
+
     });
 
 })
